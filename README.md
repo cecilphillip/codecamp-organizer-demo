@@ -17,6 +17,10 @@ Some of the samples use Ecmascript 6 syntax so the project is setup to be transp
 * npm install -g jspm
 * jspm install
 
+######RethinkDB
+The data for this project is stored in a RethinkDB database. I'd recommended spinning up a Linux VM and installing Rethinkdb from the distribution's respective package manager if you're on windows. If you're on OSX, you can always grab it from Homebrew by doing a ```brew install rethinkdb``` 
+
+Another option you have is implementing your own IDataStore and registering it in the DI system. That actually might be a good exercise for you :)
 
 Now you should be all set. Happy Coding
 
