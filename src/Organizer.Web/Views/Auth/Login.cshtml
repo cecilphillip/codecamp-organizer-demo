@@ -1,0 +1,57 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Code Camp Organizer";
+}
+
+<div class="login-container">
+ 
+    <div>
+        <div id="login-page" class="row">
+            <div class="col s12 z-depth-4 card-panel">
+                <form class="login-form" asp-controller="Auth" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" >
+                    <div class="row">
+                        <div class="input-field col s12 center">
+                            <p class="center login-form-text">Enter Your Credentials</p>
+                        </div>
+                    </div>
+                    <div class="row margin">
+                        <div class="input-field col s12">
+                            <i class="mdi-social-person-outline prefix"></i>
+                            <label asp-for="UserName"></label>
+                            <input asp-for="UserName" />
+                            <span asp-validation-for="UserName" class="right"></span>
+                        </div>
+                    </div>
+                    <div class="row margin">
+                        <div class="input-field col s12">
+                            <i class="mdi-action-lock-outline prefix"></i>
+                            <label asp-for="Password"></label>
+                            <input asp-for="Password" type="password" />
+                            <span asp-validation-for="Password" class="right"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m12 l12  login-text">
+                            <input asp-for="RememberMe" type="checkbox">
+                            <label asp-for="RememberMe"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button type="submit" class="btn waves-effect waves-light col s12 m6 l4">Login</button>
+                           
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+            document.querySelector('body').classList.add("blue-grey", "lighten-2");
+        });
+    </script>
+}

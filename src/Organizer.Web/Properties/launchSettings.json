@@ -1,0 +1,29 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:50921/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "RethinkDB:ConnectionPort": "28015",
+        "Hosting:Environment": "Development",
+        "RethinkDB:ConnectionHostName": "10.211.55.2"
+      }
+    },
+    "web": {
+      "commandName": "web",
+      "environmentVariables": {
+        "RethinkDB:ConnectionPort": "28015",
+        "Hosting:Environment": "Development",
+        "RethinkDB:ConnectionHostName": "10.211.55.2"
+      }
+    }
+  }
+}

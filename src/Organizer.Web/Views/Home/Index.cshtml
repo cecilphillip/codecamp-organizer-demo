@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SessionViewModel>
+<header>
+    <div class="banner">
+    </div>
+</header>
+
+<div class="row">
+    @await Component.InvokeAsync("SideMenu")
+
+    <section class="col s10" style="margin-top:140px;">
+        @foreach (var session in Model)
+        {
+            <session model="session"></session>
+
+            @*<div class="col s12 m4">
+                    <div class="card hoverable smaller">
+                        <div class="card-content">
+                            <i class="material-icons right activator">more_vert</i>
+                            <span class="card-title activator grey-text text-darken-4">@session.Name</span>
+                            <p><span class="light-blue-text darken-2">@session.Speaker.Name</span></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">@session.Name</span>
+                            <span class="light-blue-text darken-2">@session.Speaker.Name</span>
+                            <p><span class="brown-text darken-1 ">@session.Track</span></p>
+                            <p>Imagine if I had imported the descriptions. Thats what would go here!</p>
+                        </div>
+                    </div>
+                </div>*@
+        }
+    </section>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+            $('header').pushpin({ offset: $('header').offset().top });
+        });
+    </script>
+}

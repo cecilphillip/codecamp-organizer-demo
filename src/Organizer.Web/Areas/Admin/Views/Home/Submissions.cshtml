@@ -1,0 +1,17 @@
+﻿@model IEnumerable<SessionViewModel>
+@{
+     ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    
+    @foreach (var session in Model)
+    {
+        <session model="session"></session>
+
+           
+    }
+
+    
+  
+</div>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Camp Organizer 2016</title>
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="~/css/materialize.min.css">
+
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body class="grey lighten-4">
+    <div class="navbar-fixed smaller">
+        <nav class="smaller">
+            <div class="nav-wrapper">
+                <a asp-controller="Home" asp-action="Index" class="brand-logo">Code Camp Organizer</a>
+
+                @if (this.ViewContext.RouteData.Values["action"].ToString() == "Login") { }
+                else if (!User.Identity.IsAuthenticated)
+                {
+                    <ul class="right hide-on-med-and-down">
+                        <li><a asp-controller="Auth" asp-action="Login"><i class="material-icons left">person</i>Login</a></li>
+                    </ul>
+                }
+                else {
+                    <ul class="right hide-on-med-and-down">
+                        <li asp-secure-role="Administrator"><a asp-route="areaRoute" asp-route-area="admin" asp-route-controller="Home" asp-route-action="Index">Admin</a></li>
+                        <li><a asp-controller="Auth" asp-action="Logout"><i class="material-icons left">person</i>Logout</a></li>
+                    </ul>
+                }
+            </div>
+        </nav>
+    </div>
+
+
+
+    @RenderBody()
+
+    <footer></footer>
+
+
+    <script type="text/javascript" src="~/jspm_packages/npm/jquery@2.2.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/scripts/lib/materialize.min.js">  </script>
+    <script type="text/javascript" src="~/jspm_packages/system.js"></script>
+    <script type="text/javascript" src="~/config.js"></script>
+    <script>
+        // jspm dl-loader typescript
+        //System.import('aurelia-bootstrapper').then(function (boot) {
+        //    boot.bootstrap(function (aurelia) {
+        //        aurelia.use
+        //            .standardConfiguration()
+        //            .developmentLogging();
+        //        console.log(aurelia);
+        //        aurelia.start().then(() => aurelia.setRoot('js/main', document.body));
+        //    });
+        //});
+        $(function () {
+            var $sideMenu = $('div[name="side-menu"]');
+            if ($sideMenu.length) {
+                $sideMenu.pushpin({ offset: $sideMenu.offset().top });
+            }
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+</body>
+
+
+
+</html>

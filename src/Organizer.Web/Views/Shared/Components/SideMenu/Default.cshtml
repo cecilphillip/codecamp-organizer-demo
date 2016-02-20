@@ -1,0 +1,32 @@
+﻿@model IDictionary<string, IEnumerable<string>>
+
+<section class="col s2">
+    &nbsp;
+    <div name="side-menu">
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Tracks</div>
+                <div class="collapsible-body">
+                    <ul class="collection">
+                        @foreach (var item in Model["tracks"])
+                        {
+                            <li class="collection-item"><a asp-route="defaultRoute" asp-route-controller="Home" asp-route-action="Index" asp-route-track="@item"> @item</a></li>
+                        }
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">whatshot</i>Speakers</div>
+                <div class="collapsible-body">
+                    <ul class="collection">
+                        @foreach (var item in Model["speakers"])
+                        {
+                            <li class="collection-item"><a asp-route="defaultRoute" asp-route-controller="Home" asp-route-action="Index" asp-route-speaker="@item"> @item</a></li>
+                        }
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</section>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<SpeakerViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="row">
+
+    @foreach (var speaker in Model)
+    {
+        <div class="profile col s12 m4 l4">
+            <div class="card hoverable">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="~/images/code.jpg" alt="profile background">
+                </div>
+                <div class="card-content">
+
+                    <i class="profile-image activator material-icons">account_circle</i>
+                    <span class="card-title  grey-text text-darken-4">@speaker.Name</span>
+                    <p><i class="mdi-communication-business"></i> @speaker.Company</p>
+                    <p><i class="mdi-action-perm-identity"></i> Code Camp Speaker</p>
+                 
+
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">@speaker.Name <i class="mdi-navigation-close right"></i></span>
+                    <p><i class="mdi-communication-business"></i> @speaker.Company</p>
+                    <p><i class="mdi-action-perm-identity"></i> Code Camp Speaker</p>
+                    <p></p>
+                    <p>@speaker.Bio</p>
+                    <p>
+                  <p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

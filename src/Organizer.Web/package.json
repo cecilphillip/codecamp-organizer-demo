@@ -1,0 +1,19 @@
+{
+  "name": "ASP.NET",
+  "version": "0.0.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "jspm": "^0.16.27"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "wwwroot"
+    },
+    "dependencies": {
+      "jquery": "npm:jquery@^2.2.0"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}

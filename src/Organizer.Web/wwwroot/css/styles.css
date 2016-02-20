@@ -1,0 +1,226 @@
+﻿html, body {
+    height: 100%;
+}
+
+.banner {
+    height: 111px;
+    background-position: 9% 82%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url('../images/code_camp_header.jpg');
+    overflow: hidden;
+}
+
+    .banner .center {
+        text-align: center;
+    }
+
+header.pinned {
+    z-index: 1000;
+    width: 100%;
+}
+
+.admin header, .admin main, .admin footer {
+    padding-left: 200px;
+}
+
+.admin .side-nav {
+    width: 200px;
+}
+
+    .admin .side-nav li a:hover {
+        background-color: inherit;
+    }
+
+    .admin .side-nav li a {
+        padding: 0;
+        font-size: 1rem;
+        line-height: 45px;
+        height: 45px;
+    }
+
+    .admin .side-nav li i {
+        margin-right: 15px;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .admin .side-nav li span {
+        padding: 0;
+        font-size: 1rem;
+        line-height: 35px;
+        height: 35px;
+        color: #444;
+    }
+
+div[name='side-menu'] ul {
+    width: 198px;
+}
+
+div[name='side-menu'] ul.collection {
+     height: 185px;
+    overflow: auto;
+}
+
+div[name='side-menu'] ul.collection li.collection-item {
+     padding: 4px 10px;
+    font-size: 12px;
+}
+
+div.card.dashboard-widget .card-content {
+    padding: 5px 20px;
+}
+
+
+
+div.card.dashboard-widget li {
+    line-height: 35px;
+}
+
+    div.card.dashboard-widget li span i {
+        line-height: 35px;
+    }
+
+div.card.dashboard-widget table td {
+    padding: 15px 0 2px;
+}
+
+
+.no-hover:hover {
+    background-color: #ffffff !important;
+}
+
+.card.smaller {
+    height: 200px;
+}
+
+    .card.smaller .card-action {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+        .card.smaller .card-action a {
+            padding: 8px 14px;
+            display: inline-block;
+            width: 48%;
+            margin: 0 !important;
+            text-transform: none !important;
+        }
+
+    .card.smaller .card-content .card-title {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .card.smaller .card-reveal .card-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+        .card.smaller .card-reveal .card-title ~ p {
+            font-size: 15px;
+        }
+
+    .card.smaller .activator {
+        cursor: pointer;
+    }
+
+.profile .card .card-image {
+    height: 6.1rem;
+}
+
+.profile .card .card-content {
+    padding: 0 20px 15px;
+}
+
+    .profile .card .card-content i.profile-image {
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        font-size: 56px;
+        right: 12px;
+    }
+
+.login-container {
+    display: table;
+    margin: auto;
+    height: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .login-container {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+
+    .login-container {
+        width: 35%;
+    }
+}
+
+.login-container > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.login-container .input-field {
+    margin-top: 0;
+}
+
+.login-container span.field-validation-error {
+    color: red;
+    font-size: 11px;
+    position: absolute;
+    right: 12px;
+    top: 48px;
+}
+/* MaterializeCSS overrides*/
+.navbar-fixed.smaller, nav.smaller {
+    height: 35px;
+    line-height: 35px;
+}
+
+    nav.smaller .brand-logo, nav.smaller li a {
+        font-size: 1.1rem;
+        padding: 0 10px 0 10px;
+    }
+
+    nav.smaller ul li i {
+        height: 35px;
+        line-height: 35px;
+        font-size: 22px;
+        margin-right: 6px;
+    }
+
+    nav.smaller .side-nav.fixed {
+        top: 35px;
+    }
+
+nav .button-collapse i {
+    display: block;
+    font-size: 1.6rem;
+    height: 35px;
+    line-height: 36px;
+}
+
+@media only screen and (min-width: 601px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        font-size: 1.6rem;
+        height: 35px;
+        line-height: 36px;
+    }
+}

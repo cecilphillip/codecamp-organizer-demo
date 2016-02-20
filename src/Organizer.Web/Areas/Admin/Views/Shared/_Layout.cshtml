@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Organizer.Web</title>
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="~/css/materialize.min.css">
+
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body class="admin grey lighten-2">
+
+    <div class="navbar-fixed smaller">
+        <nav class="smaller blue darken-4">
+            <div class="nav-wrapper">
+                <span class="brand-logo">@ViewData["Title"]</span>
+
+                <ul id="slide-out" class="side-nav fixed ">
+                    <li class="no-hover"><span>Navigation</span></li>
+                    <li><a asp-controller="Home" asp-action="Index"><i class="material-icons left">desktop_windows</i>Dashboard</a></li>
+                    <li><a asp-controller="Home" asp-action="Submissions"><i class="material-icons left">info_outline</i>Submissions</a></li>
+                    <li><a asp-controller="Home" asp-action="Speakers"><i class="material-icons left">perm_identity</i>Speakers</a></li>
+                    <li><a asp-route="defaultRoute" asp-route-controller="Home" asp-route-action="Index"><i class="material-icons left">home</i>Main Site</a></li>
+                </ul>
+            </div>
+        </nav> 
+    </div>
+    <main >
+
+        @RenderBody()
+    </main>
+
+
+    <script type="text/javascript" src="~/jspm_packages/npm/jquery@2.2.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="~/scripts/lib/materialize.min.js">  </script>
+    <script type="text/javascript" src="~/jspm_packages/system.js"></script>
+    <script type="text/javascript" src="~/config.js"></script>
+
+    <script>
+
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
